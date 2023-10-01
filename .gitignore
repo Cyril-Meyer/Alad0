@@ -7,6 +7,3 @@ __pycache__/
 
 # FITS Data files
 data/*.fits
-# PNG Data files
-data/*.png
-data/*.jpg
