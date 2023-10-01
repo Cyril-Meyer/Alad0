@@ -9,3 +9,4 @@ __pycache__/
 data/*.fits
 # PNG Data files
 data/*.png
+data/*.jpg
