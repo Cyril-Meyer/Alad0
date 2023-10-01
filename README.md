@@ -1,6 +1,16 @@
 # Alad0
 A minimalist Python/WebGL system for viewing FITS images.
 
+## Usage
+FITS to PNG conversion.
+```
+python fits_to_png filename.fits
+```
+WebServer for CORS policy.
+```
+python -m http.server 80 --bind 127.0.0.1
+```
+
 
 ## External materials
 
@@ -10,3 +20,17 @@ A minimalist Python/WebGL system for viewing FITS images.
 * Axel Mellinger's Milky Way Panorama 2.0
   * [mwpan2_RGB_3600.fits](http://galaxy.phy.cmich.edu/~axel/mwpan2/mwpan2_RGB_3600.fits)
   * http://www.milkywaysky.com/
+* Douglas Finkbeiner H-alpha Full Sky Map
+  * [Halpha_map.fits](https://faun.rc.fas.harvard.edu/dfink/skymaps/halpha/data/v1_1/maps/Halpha_map.fits)
+  * https://faun.rc.fas.harvard.edu/dfink/skymaps/halpha/
+
+## Requirements
+
+* Python >= 3.7.9
+  * [Astropy](https://www.astropy.org/)
+  * [Scikit-Image](https://scikit-image.org/)
+  * [NumPy](https://numpy.org/)
+  * [Matplotlib](https://matplotlib.org/)
+* Browser with JavaScript and WebGL
+  * [Three.js](https://threejs.org/)
+  * [dat.gui](https://github.com/dataarts/dat.gui)
