@@ -1,0 +1,11 @@
+# Python venv
+venv/
+# Python cache
+__pycache__/
+# PyCharm
+.idea/
+
+# FITS Data files
+data/*.fits
+# PNG Data files
+data/*.png
