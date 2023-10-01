@@ -1,6 +1,11 @@
 # Alad0
 A minimalist Python/WebGL system for viewing FITS images.
 
+|Finkbeiner|Mellinger|
+|:-:|:-:|
+|![image](https://github.com/Cyril-Meyer/Alad0/assets/69190238/79d99696-b928-4604-9131-bc50846dc842)|![image](https://github.com/Cyril-Meyer/Alad0/assets/69190238/7cf1be27-3983-41e7-bd04-39f4b5188d7f)|
+
+
 Demo : https://cyril-meyer.github.io/Alad0/
 
 ## Usage
