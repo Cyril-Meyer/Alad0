@@ -22,7 +22,9 @@ python -m http.server 80 --bind 127.0.0.1
 ## External materials
 
 * Deep Star Maps 2020
-  * [starmap_2020_4k_print.jpg](https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004851/starmap_2020_4k_print.jpg)
+  * [starmap_2020_4k_gal_print.jpg](https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004851/starmap_2020_4k_gal_print.jpg)
+  * [milkyway_2020_4k_gal_print.jpg](https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004851/milkyway_2020_4k_gal_print.jpg)
+  * [hiptyc_2020_4k_gal_print.jpg](https://svs.gsfc.nasa.gov/vis/a000000/a004800/a004851/hiptyc_2020_4k_gal_print.jpg)
   * https://svs.gsfc.nasa.gov/4851/
 * Axel Mellinger's Milky Way Panorama 2.0
   * [mwpan2_RGB_3600.fits](http://galaxy.phy.cmich.edu/~axel/mwpan2/mwpan2_RGB_3600.fits)
