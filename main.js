@@ -63,7 +63,7 @@ const files =
 }
 function loadFile()
 {
-    let skyTexture = new THREE.TextureLoader().load('./Data/'+ files.file) // la texture
+    let skyTexture = new THREE.TextureLoader().load('./data/'+ files.file) // la texture
     skyMaterial.map = skyTexture
 }
 gui.add(files, "file", files.options).onChange(loadFile);
