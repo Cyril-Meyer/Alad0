@@ -56,7 +56,9 @@ const files =
 {
     file: "mwpan2_RGB_3600.fits.png",
     options : {
-        "Deep Star 2020": "starmap_2020_4k_print.jpg",
+        "Deep Star 2020": "starmap_2020_4k_gal_print.jpg",
+        "Deep Star 2020 no bright": "milkyway_2020_4k_gal_print.jpg",
+        "Deep Star 2020 only bright": "hiptyc_2020_4k_gal_print.jpg",
         "Mellinger": "mwpan2_RGB_3600.fits.png",
         "Finkbeiner Halpha": "Halpha_map.fits.png"
     }
