@@ -12,11 +12,13 @@ if not __name__ == "__main__":
 parser = argparse.ArgumentParser()
 parser.add_argument('filename',
                     help='input filename')
-parser.add_argument('--rescale-range', default=(0, 1e3),
+parser.add_argument('--rescale-range', default=1e3,
                     help='the rescale range to apply')
 parser.add_argument('--correction', default='log',
                     choices=['log', 'gamma', 'sigmoid'],
                     help='the correction to apply')
+parser.add_argument('--grayscale-cmap', default='hot',
+                    help='cmap to use for grayscale images')
 parser.add_argument('--preview', action="store_true",
                     help='only preview')
 args = parser.parse_args()
@@ -32,7 +34,8 @@ else:
 
 
 image_data = astropy.io.fits.getdata(args.filename)
-image_data = np.moveaxis(image_data, 0, 2)
+if len(image_data.shape) == image_data.shape[0] == 3:
+    image_data = np.moveaxis(image_data, 0, 2)
 print(f'{"image shape and type":32}', image_data.shape, image_data.dtype)
 
 '''
@@ -44,11 +47,14 @@ hdu_list.close()
 
 print(f'{"image values (min, max, mean)":32}', image_data.min(), image_data.max(), image_data.mean())
 print('> intensity rescale')
-image_data = skimage.exposure.rescale_intensity(image_data, in_range=(0, 1e3))
+image_data = skimage.exposure.rescale_intensity(image_data, in_range=(0, args.rescale_range))
 print(f'{"image values (min, max, mean)":32}', image_data.min(), image_data.max(), image_data.mean())
 print('> intensity correction')
 image_data = correction(image_data)
 print(f'{"image values (min, max, mean)":32}', image_data.min(), image_data.max(), image_data.mean())
+
+if len(image_data.shape) == 2:
+    plt.rcParams["image.cmap"] = args.grayscale_cmap
 
 if not args.preview:
     plt.imsave(f'{args.filename}.png', (image_data * 255.0).astype(np.uint8))
