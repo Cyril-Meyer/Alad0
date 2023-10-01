@@ -1,6 +1,8 @@
 # Alad0
 A minimalist Python/WebGL system for viewing FITS images.
 
+Demo : https://cyril-meyer.github.io/Alad0/
+
 ## Usage
 FITS to PNG conversion.
 ```
